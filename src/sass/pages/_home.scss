@@ -29,7 +29,7 @@ body {
 .card__content {
   text-align: center;
   position: relative;
-  padding: 15em 5em;
+  padding: 13em 5em;
   transition: transform 3s;
   transform-style: preserve-3d;
 }
@@ -52,6 +52,9 @@ body {
 
 .card__front {
   background: rgb(0, 225, 255);
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: #771616;
 }
 
 img {
@@ -62,9 +65,9 @@ img {
 .card__front::before {
   content: '';
   position: absolute;
-  --spacer: 1em;
+  --spacer: 2em;
   top: var(--spacer);
-  bottom: var(--spacer);
+  bottom: 3.4em;
   left: var(--spacer);
   right: var(--spacer);
   border: 3px solid currentColor;
@@ -86,6 +89,7 @@ img {
   transform: translateZ(4rem);
   font-size: 1.5rem;
   line-height: 1.6;
+  padding: 5em 3em;
 }
 
 .card__back {
