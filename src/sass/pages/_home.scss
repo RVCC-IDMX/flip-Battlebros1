@@ -17,16 +17,20 @@ body {
 
 .card {
   width: 400px;
-  background: pink;
-}
-
-.card:hover .card__content {
-  transform: rotate(90deg);
+  
 }
 
 .card__content {
   text-align: center;
   position: relative;
+  padding: 5em;
+  transition: transform 3s;
+  background: pink;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card__content {
+  transform: rotateY(.25turn);
 }
 
 .card__front,
@@ -36,4 +40,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.card__front {
+  background: red;
+  transform: rotateY(.25turn);
 }
