@@ -2,15 +2,38 @@
 @use "../abstracts/variables" as var;
 @use "../base/typography" as type;
 
-body {
-  font-family: type.$font;
-  background-color: var.$bg-very-light;
-  width: min(100% - 2rem, 60ch);
-  margin-inline: auto;
-  margin-block: 4rem;
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-h1 {
-  color: var.$primary-color;
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 400px;
+  background: pink;
+}
+
+.card:hover .card__content {
+  transform: rotate(90deg);
+}
+
+.card__content {
   text-align: center;
+  position: relative;
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
